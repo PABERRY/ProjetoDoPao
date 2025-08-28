@@ -12,9 +12,17 @@ namespace ProjetoDoPao
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        //variaveis globais
+        Model.Usuario Usuario = new Model.Usuario();  
+        public MenuPrincipal(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.Usuario = usuario;
+        }
+
+        private void btnComandas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

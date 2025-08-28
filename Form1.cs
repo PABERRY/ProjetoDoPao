@@ -39,6 +39,30 @@ namespace ProjetoDoPao
                 //colocar os valores dos campos nos atributos do usuario:
                 usuario.Email = txbLogin.Text;
                 usuario.Senha = txbSenha.Text;
+
+                //tabela que vai receber o resultado do SELECT (logar)
+                DataTable resultado = usuario.Logar();
+
+                //verificar se acertou o email e senha
+                if(resultado.Rows.Count == 0 ) 
+                {
+                    MessageBox.Show("E-mail e/ou senha inválidos!", "Erro!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                }
+                else
+                {
+                    //armazenar as infos vindas do bd no objeto "usuario" 
+                    usuario.Id = int.Parse (resultado.Rows[0]["id"].ToString());
+                    usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
+
+                    // mudar para o menu principal:
+                    MenuPrincipal menuPrincipal = new MenuPrincipal(usuario);
+                    Hide(); //esconder a janela atual
+                    menuPrincipal.ShowDialog(); // mostrar o meni principal
+
+                    Show();//mostrar a tela de login ao sair do menu principal
+
+                }
             }
         }
     }
