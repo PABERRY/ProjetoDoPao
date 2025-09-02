@@ -89,7 +89,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(214)))));
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Location = new System.Drawing.Point(190, 275);
             this.btnEntrar.Name = "btnEntrar";
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(243)))), ((int)(((byte)(171)))));
-            this.BackgroundImage = global::ProjetoDoPao.Properties.Resources.ACTUAL_DESIGN___This_is_what_we_publish___1_;
+            this.BackgroundImage = global::ProjetoDoPao.Properties.Resources.paes_fundo;
             this.ClientSize = new System.Drawing.Size(650, 434);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txbSenha);

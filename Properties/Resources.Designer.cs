@@ -79,5 +79,25 @@ namespace ProjetoDoPao.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_28_de_ago__de_2025__19_54_25 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 28 de ago. de 2025, 19_54_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paes_fundo {
+            get {
+                object obj = ResourceManager.GetObject("paes_fundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
