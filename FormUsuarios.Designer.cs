@@ -40,7 +40,7 @@
             this.lblNome_Cadastro = new System.Windows.Forms.Label();
             this.grbEditar = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.tbxSenha_Editar = new System.Windows.Forms.TextBox();
+            this.txbSenha_Editar = new System.Windows.Forms.TextBox();
             this.txbEmail_Editar = new System.Windows.Forms.TextBox();
             this.txbNome_Editar = new System.Windows.Forms.TextBox();
             this.lblSenha_Editar = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.Size = new System.Drawing.Size(370, 355);
             this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // grbCadastro
             // 
@@ -154,7 +155,7 @@
             // 
             this.grbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.grbEditar.Controls.Add(this.btnEditar);
-            this.grbEditar.Controls.Add(this.tbxSenha_Editar);
+            this.grbEditar.Controls.Add(this.txbSenha_Editar);
             this.grbEditar.Controls.Add(this.txbEmail_Editar);
             this.grbEditar.Controls.Add(this.txbNome_Editar);
             this.grbEditar.Controls.Add(this.lblSenha_Editar);
@@ -179,13 +180,14 @@
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // tbxSenha_Editar
+            // txbSenha_Editar
             // 
-            this.tbxSenha_Editar.Location = new System.Drawing.Point(105, 82);
-            this.tbxSenha_Editar.Name = "tbxSenha_Editar";
-            this.tbxSenha_Editar.Size = new System.Drawing.Size(168, 21);
-            this.tbxSenha_Editar.TabIndex = 1;
+            this.txbSenha_Editar.Location = new System.Drawing.Point(105, 82);
+            this.txbSenha_Editar.Name = "txbSenha_Editar";
+            this.txbSenha_Editar.Size = new System.Drawing.Size(168, 21);
+            this.txbSenha_Editar.TabIndex = 1;
             // 
             // txbEmail_Editar
             // 
@@ -256,13 +258,14 @@
             this.btnApagar.TabIndex = 1;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // lblApagar
             // 
             this.lblApagar.AutoSize = true;
             this.lblApagar.BackColor = System.Drawing.Color.Transparent;
             this.lblApagar.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApagar.Location = new System.Drawing.Point(121, 32);
+            this.lblApagar.Location = new System.Drawing.Point(23, 32);
             this.lblApagar.Name = "lblApagar";
             this.lblApagar.Size = new System.Drawing.Size(317, 23);
             this.lblApagar.TabIndex = 0;
@@ -306,7 +309,7 @@
         private System.Windows.Forms.Label lblSenha_Cadastro;
         private System.Windows.Forms.GroupBox grbEditar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.TextBox tbxSenha_Editar;
+        private System.Windows.Forms.TextBox txbSenha_Editar;
         private System.Windows.Forms.TextBox txbEmail_Editar;
         private System.Windows.Forms.TextBox txbNome_Editar;
         private System.Windows.Forms.Label lblSenha_Editar;

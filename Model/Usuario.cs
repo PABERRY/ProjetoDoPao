@@ -93,6 +93,67 @@ namespace ProjetoDoPao.Model
             }
         }
 
+        public bool Apagar()
+        {
+            string comando = "DELETE FROM usuarios WHERE id = @id";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@id", Id);
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+
+            }     
+                        
+        }
+        public bool Modificar()
+        {
+            string comando = "UPDATE usuarios SET nome_completo = @nome_completo, " +
+                "email = @email, senha = @senha WHERE id = @id";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@nome_completo", NomeCompleto);
+            cmd.Parameters.AddWithValue("@email", Email);
+            cmd.Parameters.AddWithValue("@senha", Senha);
+            cmd.Parameters.AddWithValue("@id", Id);
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
     }
     
 }
