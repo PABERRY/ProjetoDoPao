@@ -23,13 +23,26 @@ namespace ProjetoDoPao
 
         private void btnComandas_Click(object sender, EventArgs e)
         {
-
+            FormComandas formComandas = new FormComandas(usuario);
+            formComandas.ShowDialog();
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             FormUsuarios formUsuarios = new FormUsuarios(usuario);
             formUsuarios.ShowDialog();// mostrar o form
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            FormProdutos formProdutos = new FormProdutos(usuario);
+            formProdutos.ShowDialog();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            FormCaixa formCaixa = new FormCaixa(usuario);
+            formCaixa.ShowDialog();
         }
     }
 }
