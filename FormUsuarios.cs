@@ -57,7 +57,7 @@ namespace ProjetoDoPao
                 Model.Usuario usuarioCadastro = new Model.Usuario();
 
                 //salvar os valores dos campos nos atributos do objeto:
-                usuarioCadastro.NomeCompleto = txbSenha_Cadastro.Text;
+                usuarioCadastro.NomeCompleto = txbNome_Cadastro.Text;
                 usuarioCadastro.Email = txbEmail_cadastro.Text;
                 usuarioCadastro.Senha = txbSenha_Cadastro.Text;
 
