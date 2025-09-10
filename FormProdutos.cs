@@ -14,17 +14,21 @@ namespace ProjetoDoPao
     public partial class FormProdutos : Form
     {
         Model.Usuario usuario;
+        Model.Produto produto = new Model.Produto();
 
         int idselecionado = 0;
         public FormProdutos(Model.Usuario usuario)
         {
+
             InitializeComponent();
             this.usuario = usuario;
+            AtualizarDgv();
+            ListarCategoriasCmb();
         }
         public void AtualizarDgv()
         {
             //Mostrar as informações do bd no datagridveiw:
-            dgvProdutos.DataSource = usuario.listar();
+            dgvProdutos.DataSource = produto.Listar();
         }
 
         public void ListarCategoriasCmb()
@@ -36,8 +40,8 @@ namespace ProjetoDoPao
             {
                 //1- salgados
                 //2- bebidas
-                cmbCategoria_CadastrarProdutos.Items.Add($"{dr["dr"]} - {dr["nome"]}");
-                cmbCategoria_EditarProdutos.Items.Add($"{dr["dr"]} - {dr["nome"]}");
+                cmbCategoria_CadastrarProdutos.Items.Add($"{dr["id"]} - {dr["nome"]}");
+                cmbCategoria_EditarProdutos.Items.Add($"{dr["id"]} - {dr["nome"]}");
             }
 
         }
@@ -65,13 +69,16 @@ namespace ProjetoDoPao
                 produtoCadastro.Nome = txbNome_CadastrarProdutos.Text;
                 produtoCadastro.Preco = preco;
 
-                string produtoselecionado = cmbCategoria_CadastrarProdutos.SelectedItem.ToString(); 
+                string produtoselecionado = cmbCategoria_CadastrarProdutos.Text.ToString(); 
                 string numero_categoria = produtoselecionado.Split('-')[0].Trim();
+                produtoCadastro.IdCategoria = int.Parse(numero_categoria);
+                produtoCadastro.IdRespCadastro = usuario.Id;
+
 
                 //Executar o insert
                 if (produtoCadastro.Cadastrar())
                 {
-                    MessageBox.Show("Usuário cadastrado com sucesso!", "Show!",
+                    MessageBox.Show("Produto cadastrado com sucesso!", "Show!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Atualizar o dgv:
                     AtualizarDgv();
@@ -83,7 +90,7 @@ namespace ProjetoDoPao
                 }
                 else
                 {
-                    MessageBox.Show("Falha ao cadastrar o usuário", "Erro",
+                    MessageBox.Show("Falha ao cadastrar o Produto", "Erro",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -161,9 +168,9 @@ namespace ProjetoDoPao
 
         private void btnEditar_Produtos_Click(object sender, EventArgs e)
         {
-            double preco = double.Parse(txbNome_EditarProdutos.Text);
+            double preco = double.Parse(txbPreco_EditarProdutos.Text);
             //Validar campos:
-            if (txbNome_CadastrarProdutos.Text.Length < 3)
+            if (txbNome_EditarProdutos.Text.Length < 3)
             {
                 MessageBox.Show("O nome deve ter no mínimo 3 caracteres", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -173,9 +180,43 @@ namespace ProjetoDoPao
                 MessageBox.Show("Verifique o valor", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+            else
+            {
 
-            
+                Model.Produto editarProduto = new Model.Produto();
+
+
+                editarProduto.Nome = txbNome_EditarProdutos.Text;
+                editarProduto.Preco = preco;
+
+                string produtoselecionado = cmbCategoria_EditarProdutos.SelectedItem.ToString();
+                string numero_categoria = produtoselecionado.Split('-')[0].Trim();
+                editarProduto.IdCategoria = int.Parse(numero_categoria);
+                editarProduto.IdRespCadastro = usuario.Id;
+                editarProduto.Id = idselecionado;
+
+
+                if (editarProduto.Modificar())
+                {
+                    MessageBox.Show("produto Editado com sucesso!", "Show!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Atualizar o dgv:
+                    AtualizarDgv();
+
+                    //Apagar os campos de cadastro
+                   txbNome_EditarProdutos.Clear();
+                    txbPreco_EditarProdutos.Clear();
+
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao Editar o Produto", "Erro",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
+            }
         }
     }
 }

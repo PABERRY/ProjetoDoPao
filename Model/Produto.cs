@@ -16,7 +16,7 @@ namespace ProjetoDoPao.Model
         public string Nome { get; set; }
         public double Preco { get; set; }
         public int IdCategoria { get; set; }
-        public string IdRespCadastro { get; set; }
+        public int IdRespCadastro { get; set; }
 
         public DataTable Listar()
         {
@@ -32,8 +32,8 @@ namespace ProjetoDoPao.Model
         }
         public bool Cadastrar()
         {
-            string comando = "INSERT INTO produtos (nome, preco, id_categoria) VALUES " +
-                "(@nome, @preco, @id_categoria)";
+            string comando = "INSERT INTO produtos (nome, preco, id_categoria, id_respcadastro) VALUES " +
+                "(@nome, @preco, @id_categoria, @id_respcadastro)";
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);

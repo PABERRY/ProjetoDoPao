@@ -66,7 +66,8 @@ namespace ProjetoDoPao.Model
 
             cmd.Parameters.AddWithValue("@nome_completo", NomeCompleto);
             cmd.Parameters.AddWithValue("@email", Email);
-            cmd.Parameters.AddWithValue("@senha", Senha);
+            string hash = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+            cmd.Parameters.AddWithValue("@senha", hash);
 
             // Obs.: Certifique-se de utilizar alguma método para obter o hash da senha antes de cadastrar!
             cmd.Prepare();
