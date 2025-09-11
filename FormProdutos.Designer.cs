@@ -278,8 +278,11 @@
             this.Controls.Add(this.grbEditar_Produtos);
             this.Controls.Add(this.grbCadastrar_CadastrarProdutos);
             this.Controls.Add(this.dgvProdutos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormProdutos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProdutos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.grbCadastrar_CadastrarProdutos.ResumeLayout(false);

@@ -136,7 +136,7 @@ namespace ProjetoDoPao
                     MessageBox.Show("Produto apagado com sucesso!", "Show",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                    AtualizarDgv();
                 }
                 else
                 {
