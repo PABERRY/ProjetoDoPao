@@ -43,6 +43,7 @@
             this.txbQuantidade = new System.Windows.Forms.TextBox();
             this.btnLancar_Produto = new System.Windows.Forms.Button();
             this.lblTituloComandas = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComandas)).BeginInit();
             this.grbInformacoes.SuspendLayout();
             this.grbLancamentos.SuspendLayout();
@@ -75,14 +76,15 @@
             // grbLancamentos
             // 
             this.grbLancamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.grbLancamentos.Controls.Add(this.btnCancelar);
             this.grbLancamentos.Controls.Add(this.btnLancar_Produto);
             this.grbLancamentos.Controls.Add(this.lblQuantidade);
             this.grbLancamentos.Controls.Add(this.lblProduto_lancamento);
             this.grbLancamentos.Controls.Add(this.txbQuantidade);
             this.grbLancamentos.Controls.Add(this.txbProduto_Lancamento);
-            this.grbLancamentos.Location = new System.Drawing.Point(28, 264);
+            this.grbLancamentos.Location = new System.Drawing.Point(28, 249);
             this.grbLancamentos.Name = "grbLancamentos";
-            this.grbLancamentos.Size = new System.Drawing.Size(281, 169);
+            this.grbLancamentos.Size = new System.Drawing.Size(281, 197);
             this.grbLancamentos.TabIndex = 2;
             this.grbLancamentos.TabStop = false;
             this.grbLancamentos.Text = "Lançamento";
@@ -194,6 +196,18 @@
             this.lblTituloComandas.TabIndex = 3;
             this.lblTituloComandas.Text = "Lançamento de Comandas ";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(39, 154);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(193, 37);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FormComandas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,5 +250,6 @@
         private System.Windows.Forms.TextBox txbProduto_Lancamento;
         private System.Windows.Forms.Button btnLancar_Produto;
         private System.Windows.Forms.Label lblTituloComandas;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

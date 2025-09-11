@@ -57,6 +57,7 @@ namespace ProjetoDoPao
                 {
                     MessageBox.Show("lançamento efetuado", "Sucesso!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ResetarCampos();
                 }
                 else
                 {
@@ -99,6 +100,11 @@ namespace ProjetoDoPao
             //resetar os groupboxes:
             grbLancamentos.Enabled = false;
             grbInformacoes.Enabled = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            ResetarCampos();
         }
     }
 }
