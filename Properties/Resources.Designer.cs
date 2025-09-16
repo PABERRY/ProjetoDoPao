@@ -63,6 +63,16 @@ namespace ProjetoDoPao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1649378 {
+            get {
+                object obj = ResourceManager.GetObject("1649378", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ACTUAL_DESIGN___This_is_what_we_publish_ {
             get {
                 object obj = ResourceManager.GetObject("ACTUAL_DESIGN___This_is_what_we_publish_", resourceCulture);

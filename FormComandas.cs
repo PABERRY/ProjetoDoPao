@@ -56,7 +56,7 @@ namespace ProjetoDoPao
                 if (ordemComanda.Cadastrar())
                 {
                     MessageBox.Show("lançamento efetuado", "Sucesso!",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetarCampos();
                 }
                 else

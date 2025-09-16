@@ -42,7 +42,7 @@
             this.lblTitulo_Menu_Principal.AutoSize = true;
             this.lblTitulo_Menu_Principal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.lblTitulo_Menu_Principal.Font = new System.Drawing.Font("Swis721 Blk BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo_Menu_Principal.Location = new System.Drawing.Point(248, 49);
+            this.lblTitulo_Menu_Principal.Location = new System.Drawing.Point(313, 56);
             this.lblTitulo_Menu_Principal.Name = "lblTitulo_Menu_Principal";
             this.lblTitulo_Menu_Principal.Size = new System.Drawing.Size(189, 25);
             this.lblTitulo_Menu_Principal.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.lblSaldação.AutoSize = true;
             this.lblSaldação.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.lblSaldação.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldação.Location = new System.Drawing.Point(196, 132);
+            this.lblSaldação.Location = new System.Drawing.Point(261, 139);
             this.lblSaldação.Name = "lblSaldação";
             this.lblSaldação.Size = new System.Drawing.Size(320, 19);
             this.lblSaldação.TabIndex = 0;
@@ -64,9 +64,9 @@
             this.btnComandas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.btnComandas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComandas.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComandas.Location = new System.Drawing.Point(199, 190);
+            this.btnComandas.Location = new System.Drawing.Point(231, 197);
             this.btnComandas.Name = "btnComandas";
-            this.btnComandas.Size = new System.Drawing.Size(317, 43);
+            this.btnComandas.Size = new System.Drawing.Size(386, 43);
             this.btnComandas.TabIndex = 1;
             this.btnComandas.Text = "COMANDAS";
             this.btnComandas.UseVisualStyleBackColor = false;
@@ -77,9 +77,9 @@
             this.btnProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProdutos.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProdutos.Location = new System.Drawing.Point(199, 250);
+            this.btnProdutos.Location = new System.Drawing.Point(231, 257);
             this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Size = new System.Drawing.Size(317, 43);
+            this.btnProdutos.Size = new System.Drawing.Size(386, 43);
             this.btnProdutos.TabIndex = 1;
             this.btnProdutos.Text = "PRODUTOS";
             this.btnProdutos.UseVisualStyleBackColor = false;
@@ -90,9 +90,9 @@
             this.btnCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaixa.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaixa.Location = new System.Drawing.Point(199, 312);
+            this.btnCaixa.Location = new System.Drawing.Point(231, 319);
             this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(317, 43);
+            this.btnCaixa.Size = new System.Drawing.Size(386, 43);
             this.btnCaixa.TabIndex = 1;
             this.btnCaixa.Text = "CAIXA";
             this.btnCaixa.UseVisualStyleBackColor = false;
@@ -103,9 +103,9 @@
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.Location = new System.Drawing.Point(199, 375);
+            this.btnUsuario.Location = new System.Drawing.Point(231, 382);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(317, 43);
+            this.btnUsuario.Size = new System.Drawing.Size(386, 43);
             this.btnUsuario.TabIndex = 1;
             this.btnUsuario.Text = "USUÁRIOS";
             this.btnUsuario.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(243)))), ((int)(((byte)(171)))));
             this.BackgroundImage = global::ProjetoDoPao.Properties.Resources.paes_fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(677, 450);
+            this.ClientSize = new System.Drawing.Size(800, 488);
             this.Controls.Add(this.btnProdutos);
             this.Controls.Add(this.btnUsuario);
             this.Controls.Add(this.btnCaixa);
